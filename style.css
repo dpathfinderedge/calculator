@@ -1,0 +1,97 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #100a1c;
+    background-image: radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
+    radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+    background-attachment: fixed;
+    color: #000000;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    margin: 40px auto;
+    background: #e0e0e0;
+    border-radius: 25px;
+    box-shadow: inset -6px -6px 9px #fff, inset 6px 6px 9px rgba(0, 0, 0, 0.4);
+}
+
+.accumulator {
+    position: relative;
+    top: 50px;
+    max-width: 300px;
+    height: 75px;
+    margin: 0 auto 100px auto;
+    background: #e1e1e1;
+    border-radius: 20px;
+    box-shadow: inset -6px -6px 9px #fff, inset 6px 6px 9px rgba(0, 0, 0, 0.4);
+}
+
+.operation-display {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    font-size: 18px;
+    color: #18222c;
+}
+
+.result {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    font-size: 24px;
+    color: #0a0a0a;
+}
+
+.grid-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 18px;
+    margin: 0 35px;
+    width: 80%;
+}
+
+.numbers, .functions, .root, .percent, .dot, .clear-all, .clear-current, .equal {
+    width: 55px;
+    height: 45px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000;
+    background: #e1e1e1;
+    text-align: center;
+    border: none;
+    box-shadow: 5px 5px 10px #afafaf, -5px -5px 10px #fff;
+    transition: all 0.3s;
+}
+
+button:focus {
+    outline: none;
+}
+
+.numbers:active, .dot:active, .equal:active {
+    background: #7b6f71;
+    box-shadow: 0 1px #fff;
+    transform: translateY(4px);
+}
+
+.functions:active, .root:active, .percent:active, .clear-all:active, .clear-current:active {
+    background: #e7bcea;
+    box-shadow: 0 1px #fff;
+    transform: translateY(4px);
+}
+
+.functions, .root, .percent, .clear-all, .clear-current{
+    color: #ff652f;
+}
+
