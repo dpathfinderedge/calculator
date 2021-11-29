@@ -1,2 +1,2 @@
-# calculator
-A basic Calculator created using JavaScript.
+# JS Calculator
+A Calculator that supports basic arithmetic calculations on integers.
